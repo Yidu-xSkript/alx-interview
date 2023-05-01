@@ -15,13 +15,13 @@ def canUnlockAll(boxes):
 
     openBox = {}
     while True:
+        keys = None
         if len(openBox) == 0:
             openBox[0] = {
                 'status': 'opened',
                 'keys': boxes[0],
             }
-        keys = None
-        for box in openBox.items():
+        for box in openBox.values():
             if box.get('status') == 'opened':
                 box['status'] = 'opened/checked'
                 keys = box.get('keys')
