@@ -24,7 +24,7 @@ def validUTF8(data):
                 return False
         else:
             if not (i & encodingA and not (i & encodingB)):
-                    return False
+                return False
         bytes -= 1
     if bytes == 0:
         return True
